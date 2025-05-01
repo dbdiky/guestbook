@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jackett
+spec:
+  selector:
+    matchLabels:
+      app: jackett
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: jackett
+    spec:
+      containers:
+      - name: jacket
+        image: linuxserver/jackett:0.22.1837
+        ports:
+        - containerPort: 9117
+
+
