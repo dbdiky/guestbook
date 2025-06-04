@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: jackett
   labels:
+    app: jackett
     istio-injection: enabled
 spec:
   selector:
